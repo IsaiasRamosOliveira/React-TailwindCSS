@@ -16,7 +16,11 @@ const Aside = () => {
   return (
     <aside className="aside">
       <ul className="list">
-        <a href="#" className="itemAside">
+        <a
+          href="#"
+          className="itemAside dark:hover:bg-primary-200
+            hover:bg-red-400"
+        >
           <CodeBracketIcon className="icon" />
         </a>
         <li className="itemAside">

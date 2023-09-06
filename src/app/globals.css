@@ -78,10 +78,10 @@
             sm:border-t
             dark:border-primary-500
             border-red-600
-            dark:hover:bg-primary-200
-            hover:bg-red-400
+            sm:dark:hover:bg-primary-200
+            sm:hover:bg-red-400
     }
-    .list .icon {
+    .list .icon{
         @apply hidden
             sm:block;
     }

@@ -6,7 +6,7 @@ const ToggleTheme = () => {
     globalThis.document?.documentElement?.classList.toggle("dark");
   };
   return (
-    <a className="itemAside">
+    <a className="itemAside bg-red-500 dark:bg-primary-400 w-[64px] absolute sm:relative top-[54px] sm:top-auto">
       <MoonIcon className="icon block dark:hidden" onClick={toggle} />
       <SunIcon className="icon hidden dark:block" onClick={toggle} />
     </a>
