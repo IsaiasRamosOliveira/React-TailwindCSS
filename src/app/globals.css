@@ -2,26 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer components {
+    .header {
+        @apply dark:bg-primary-400
+            bg-red-500 
+            col-span-2
+            row-span-1
+            border-b 
+            dark:border-primary-500
+            border-red-600
+            flex
+            justify-between
+            items-center
+            px-4;
+    }
+    .aside {
+        @apply dark:bg-primary-400
+            bg-red-500 
+            flex
+            flex-col
+            justify-between
+            row-span-2 
+            col-span-1
+            border-r 
+            border-b
+            dark:border-primary-500
+          border-red-600
+            w-[64px]
+            h-[54px]
+            sm:h-full;
+    }
+    .content {
+    }
+    .menu {
+        @apply dark:bg-primary-200
+        bg-red-400
+            border-r
+            row-span-2
+            col-span-1
+          dark:border-primary-500
+          border-red-600
+            hidden
+            sm:block;
+    }
+    .container {
+        @apply dark:bg-primary-500
+            bg-slate-50 
+            h-screen
+            grid 
+            grid-cols-[64px_200px_calc(100vw-264px)] 
+            grid-rows-[54px_1fr]
+            overflow-hidden;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+    .list {
+        @apply flex
+            flex-col;
+    }
+    .icon {
+        @apply m-auto
+            w-6
+            cursor-pointer
+            text-center
+            dark:text-primary-100
+            text-slate-100;
+    }
+    .itemAside {
+        @apply h-[53px]
+            cursor-pointer
+            flex
+            justify-center
+            items-center
+            sm:border-t
+            dark:border-primary-500
+            border-red-600
+            dark:hover:bg-primary-200
+            hover:bg-red-400
+    }
+    .list .icon {
+        @apply hidden
+            sm:block;
+    }
+    .list .itemAside:nth-child(1) .icon:nth-child(1) {
+        @apply block;
+    }
+    .itemAside:hover .icon {
+        @apply text-slate-100 ease-in-out duration-200;
+    }
 }
