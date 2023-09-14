@@ -2,23 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --primary-100: rgb(241 245 249);
+    --primary-200: rgb(249, 230, 229);
+    --primary-300: rgb(248 113 113);
+    --primary-400: rgb(239 68 68);
+    --primary-500: rgb(220 38 38);
+
+    --label-common: rgb(129 140 248);
+    --label-orange: #fd7c21;
+    --label-green: #48d0d0;
+  }
+  .theme-blue {
+    --primary-100: rgb(241 245 249);
+    --primary-200: rgb(222, 237, 251);
+    --primary-300: rgb(96 165 250);
+    --primary-400: rgb(59 130 246);
+    --primary-500: rgb(37 99 235);
+  }
+}
+
 @layer components {
-    .header {
-        @apply dark:bg-primary-400
-            bg-red-500 
+  .header {
+    @apply dark:bg-primary-400
             col-span-2
             row-span-1
             border-b 
             dark:border-primary-500
-            border-red-600
             flex
             justify-between
             items-center
-            px-4;
-    }
-    .aside {
-        @apply dark:bg-primary-400
-            bg-red-500 
+            pl-4;
+  }
+  .aside {
+    @apply dark:bg-primary-400
             flex
             flex-col
             justify-between
@@ -27,68 +45,61 @@
             border-r 
             border-b
             dark:border-primary-500
-          border-red-600
             w-[64px]
             h-[54px]
             sm:h-full;
-    }
-    .content {
-    }
-    .menu {
-        @apply dark:bg-primary-200
-        bg-red-400
+  }
+  .menu {
+    @apply dark:bg-primary-200
             border-r
             row-span-2
             col-span-1
           dark:border-primary-500
-          border-red-600
             hidden
             sm:block;
-    }
-    .container {
-        @apply dark:bg-primary-500
+  }
+  .container {
+    @apply dark:bg-primary-500
             bg-slate-50 
             h-screen
             grid 
             grid-cols-[64px_200px_calc(100vw-264px)] 
             grid-rows-[54px_1fr]
             overflow-hidden;
-    }
+  }
 }
 
 @layer components {
-    .list {
-        @apply flex
+  .list {
+    @apply flex
             flex-col;
-    }
-    .icon {
-        @apply m-auto
+  }
+  .icon {
+    @apply m-auto
             w-6
             cursor-pointer
             text-center
             dark:text-primary-100
             text-slate-100;
-    }
-    .itemAside {
-        @apply h-[53px]
+  }
+  .itemAside {
+    @apply h-[53px]
             cursor-pointer
             flex
             justify-center
             items-center
             sm:border-t
             dark:border-primary-500
-            border-red-600
-            sm:dark:hover:bg-primary-200
-            sm:hover:bg-red-400
-    }
-    .list .icon{
-        @apply hidden
+            sm:dark:hover:bg-primary-200;
+  }
+  .list .icon {
+    @apply hidden
             sm:block;
-    }
-    .list .itemAside:nth-child(1) .icon:nth-child(1) {
-        @apply block;
-    }
-    .itemAside:hover .icon {
-        @apply text-slate-100 ease-in-out duration-200;
-    }
+  }
+  .list .itemAside:nth-child(1) .icon:nth-child(1) {
+    @apply block;
+  }
+  .itemAside:hover .icon {
+    @apply text-slate-100 ease-in-out duration-200;
+  }
 }

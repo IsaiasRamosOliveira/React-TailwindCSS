@@ -6,7 +6,7 @@ import Header from "./patterns/Header";
 import Aside from "./patterns/Aside";
 
 export const metadata: Metadata = {
-  title: "Next + tailwindCSS",
+  title: "Jobs",
   description: "Um projeto para treinar minhas habilidades com o tailwind CSS",
 };
 

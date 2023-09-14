@@ -8,58 +8,57 @@ import {
   ChatBubbleOvalLeftEllipsisIcon,
   EnvelopeIcon,
   ChartBarIcon,
-  MoonIcon,
 } from "@heroicons/react/24/solid";
-import ToggleTheme from "@/app/components/ToggleTheme";
+import { Props } from "next/script";
 
-const Aside = () => {
+const Aside = ({ className }: Props) => {
   return (
-    <aside className="aside">
+    <aside className={`aside ${className} bg-primary400 border-primary500`}>
       <ul className="list">
         <a
           href="#"
-          className="itemAside dark:hover:bg-primary-200
-            hover:bg-red-400"
+          className="itemAside sm:hover:bg-primary300 dark:hover:bg-primary-200 
+            border-primary500
+            hover:bg-primary300 "
         >
           <CodeBracketIcon className="icon" />
         </a>
-        <li className="itemAside">
+        <li className="itemAside sm:hover:bg-primary300 border-primary500">
           <a href="">
             <HomeIcon className="icon" />
           </a>
         </li>
-        <li className="itemAside">
+        <li className="itemAside sm:hover:bg-primary300 border-primary500">
           <a href="">
             <DocumentTextIcon className="icon" />
           </a>
         </li>
-        <li className="itemAside">
+        <li className="itemAside sm:hover:bg-primary300 border-primary500">
           <a href="">
             <Square3Stack3DIcon className="icon" />
           </a>
         </li>
-        <li className="itemAside">
+        <li className="itemAside sm:hover:bg-primary300 border-primary500">
           <a href="">
             <UserGroupIcon className="icon" />
           </a>
         </li>
-        <li className="itemAside">
+        <li className="itemAside sm:hover:bg-primary300 border-primary500">
           <a href="">
             <ChatBubbleOvalLeftEllipsisIcon className="icon" />
           </a>
         </li>
-        <li className="itemAside">
+        <li className="itemAside sm:hover:bg-primary300 border-primary500">
           <a href="">
             <EnvelopeIcon className="icon" />
           </a>
         </li>
-        <li className="itemAside">
+        <li className="itemAside sm:hover:bg-primary300 border-primary500">
           <a href="">
             <ChartBarIcon className="icon" />
           </a>
         </li>
       </ul>
-      <ToggleTheme />
     </aside>
   );
 };

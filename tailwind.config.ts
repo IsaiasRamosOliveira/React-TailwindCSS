@@ -9,6 +9,23 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary100: "var(--primary-100)",
+        primary200: "var(--primary-200)",
+        primary300: "var(--primary-300)",
+        primary400: "var(--primary-400)",
+        primary500: "var(--primary-500)",
+        "label-common": "var(--label-common)",
+        "label-orange": "var(--label-orange)",
+        "label-green": "var(--label-green)",
+      },
+      border: {
+        primary100: "var(--primary-100)",
+        primary200: "var(--primary-200)",
+        primary300: "var(--primary-300)",
+        primary400: "var(--primary-400)",
+        primary500: "var(--primary-500)",
+      },
       backgroundColor: {
         primary: {
           100: "#5E6065",
